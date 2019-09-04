@@ -5,10 +5,8 @@
             <span @click="more()" class="moreMovies">更多</span>
         </p>
         <div class="listBox">
-            <div v-for="(v,i) in arr" :key='i' class="movieList">
-                <a :href="v.href" :style='{color:v.color }'>{{ v.title }}</a>
-                <span></span>
-            </div> 
+            <a v-for="(v,i) in arr" :key='i' :href="v.href" :style='{color:v.color }' v-if="!v.line">{{ v.title }}</a>
+            <br v-else>
         </div>
     </div>
 </template>
@@ -48,13 +46,11 @@ export default {
     }
     .listBox{
         width: 100%;
-        display: flex;
-        
         overflow: auto;
-    }
-   .movieList a{
-        display: block;
         white-space: nowrap;
+    }
+    a{
+        display: inline-block;
         padding: .1rem;
         border:1px solid;
         margin: 0 .05rem .1rem;
