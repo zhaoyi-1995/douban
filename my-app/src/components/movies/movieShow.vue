@@ -6,10 +6,11 @@
         </p>
         <div class="imgBox">
             <div class="movieSession" v-for='(v,i) in arr' :key='i'>
-                <img :src="v.images.small">
-                <p>{{ v.title }}</p>
-                <star :fivexx='v.rating.average'></star>    
-               
+                <router-link :to='{name:"DetailsPage",params:{id:v.id}}'>
+                    <img :src="v.images.small">
+                    <p>{{ v.title }}</p>
+                </router-link>    
+                    <star :fivexx='v.rating.average'></star>    
             </div>
         </div>
     </div>

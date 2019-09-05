@@ -9,6 +9,9 @@ import Book from '../pages/book'
 import Redio from '../pages/redio'
 import Group from '../pages/group'
 import CheckOut from '../pages/checkOut'
+import DetailsPage from '../pages/detailsPage'
+import MovieShow from '../components/movies/movieShow'
+import DetailsSession from '../components/details/detailsSession'
 
 Vue.use(Router)
 
@@ -58,6 +61,21 @@ export default new Router({
       path: '/checkout',
       name: 'CheckOut',
       component: CheckOut
+    },
+    {
+      path: '/detailspage/:id',
+      name: 'DetailsPage',
+      component: DetailsPage
+    },
+    {
+      path: '/movieshow',
+      name: 'MovieShow',
+      component: MovieShow
+    },
+    {
+      path: '/detailssession/:id',
+      name: 'DetailsSession',
+      component: DetailsSession
     },
   ]
 })

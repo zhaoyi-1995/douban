@@ -50,7 +50,7 @@ export default {
             url:'/findgoodmovies',
             methods:'get',
         }).then((ok)=>{
-            console.log(ok.data)
+            // console.log(ok.data)
             this.findGoodMovies = ok.data
 
         });
@@ -58,9 +58,8 @@ export default {
             url:'/movielist',
             methods:'get',
         }).then((ok)=>{
-            console.log(ok.data)
+            // console.log(ok.data)
             this.kindsLookData = ok.data
-
         })
     }
 }

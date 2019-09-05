@@ -7,3 +7,4 @@ Mock.mock('/movielist','get',require('./json/movielist'));
 Mock.mock('/groups','get',require('./json/groups'));
 Mock.mock('/check','get',require('./json/toggle'));
 Mock.mock('/books','get',require('./json/books'));
+Mock.mock('/goodbook','get',require('./json/goodbook'));

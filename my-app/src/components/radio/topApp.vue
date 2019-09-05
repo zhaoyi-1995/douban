@@ -1,13 +1,18 @@
 <template>
     <div class="topLoad">
-        <span>打开APP浏览更多</span>
+        <span>{{ title }}</span>
         <button class="btn btn-success" id="btn1">极速下载</button>
         <button class="btn btn-default">打开</button>
     </div>
 </template>
 <script>
 export default {
-    
+    props:{
+        title:{
+            type:String,
+            required:true
+        }
+    }
 }
 </script>
 <style scoped>

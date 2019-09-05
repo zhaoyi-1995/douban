@@ -1,7 +1,7 @@
 <template>
     <div class="radioBox">
         <all-nav></all-nav>
-        <top-app></top-app>
+        <top-app title="打开APP浏览更多"></top-app>
         <user-login></user-login>
         <comment v-for='(v,i) in 6' :key='i'></comment>
         <p class="moreVadios"><a href="#">显示更多广播</a> </p>
