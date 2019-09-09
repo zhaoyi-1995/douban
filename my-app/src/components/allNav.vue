@@ -27,8 +27,15 @@ export default {
 </script>
 <style scoped>
     #navBox{
+        background: white;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: .5rem;
         display: flex;
-        justify-content: space-between
+        justify-content: space-between;
+        border-bottom: 1px solid gainsboro;
+        z-index: 999999;
     }
     .navLogo{
         color: #05b512;
@@ -60,6 +67,7 @@ export default {
         color: #2ab8cc;
     }
     .checkMenu{
+        margin-top: .16rem;
         width: .25rem;
         height: .25rem;
     }

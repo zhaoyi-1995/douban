@@ -12,11 +12,23 @@ import CheckOut from '../pages/checkOut'
 import DetailsPage from '../pages/detailsPage'
 import MovieShow from '../components/movies/movieShow'
 import DetailsSession from '../components/details/detailsSession'
+import BookDetails from '../pages/bookDetails'
+import ceshi from '../pages/ceshi'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
+    {
+      path: '/ceshi',
+      name: 'ceshi',
+      component: ceshi
+    },
+    {
+      path: '/bookdetails/:id',
+      name: 'BookDetails',
+      component: BookDetails
+    },
     {
       path: '/home',
       name: 'Home',

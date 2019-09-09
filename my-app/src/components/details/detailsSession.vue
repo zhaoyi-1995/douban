@@ -1,16 +1,14 @@
 <template>
-    <div>
+<div>
+    <img class="loading" src="../../../static/img/loading.gif" v-if="arr.length<=0">
+
+    <div v-else>
         <div class="topBox">
             <div class="leftBox">
                 <h4>{{ arr[0].title }}</h4>
+                
                 <div class="comment">
-                    <el-rate
-                        v-model="value"
-                        disabled
-                        show-score
-                        text-color="#ff9900"
-                        score-template=' { value } '>
-                    </el-rate>
+                    <star :num='numbers'></star>
                     <span class="peopleNum">{{ arr[0].collect_count }}人评价</span>
                 </div>
                 <p class="casts">
@@ -21,7 +19,7 @@
                 </p>
                 <a href="#" class="app">用APP查看人影资料</a>
             </div>
-            <img src="../../../static/img/1.jpg" alt="">
+            <img :src="arr[0].images.small" alt="">
         </div>
         <div class="choice">
             <span>想看</span><span>看过</span>
@@ -36,13 +34,18 @@
         <h4 class="moreKinds">查看更多相关分类</h4>
         <span v-for="(v,i) in arr[0].genres" :key='i' class="plot">{{ v }}</span>
     </div>
+</div>
+    
 </template>
 <script>
+import Star from './star'
 export default {
+    components:{
+        Star
+    },
     data() {
       return {
-        value: 3.7,
-        average:0
+        numbers: 0
       }
     },
     props:{
@@ -51,10 +54,10 @@ export default {
             required:true
         }
     },
-    beforeMount() {
-        console.log(this.arr)
-        // this.average = this.arr[0].rating.average
-        // console.log(this.average)
+    created() {
+       this.numbers = this.arr[0].rating.average
+       console.log(this.numbers)
+       console.log(this.numbers)
     },
 }
 </script>

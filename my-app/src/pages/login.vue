@@ -33,23 +33,24 @@ export default {
 
         },
         login(){
-            var param = new URLSearchParams;
-                param.append('email',this.email);
-                param.append('userPass',this.userPass);
-            this.axios({
-                method:'post',
-                url:'http://localhost:3000/login',
-                data:param
-            }).then((ok)=>{
-                if(ok.data.linkid == 0){
-                    alert('用户名或密码错误');
-                }else if(ok.data.linkid == 1){
-                    alert('登录成功');
-                    this.$router.replace('/home')
-                }else{
-                    alert('请确认您已输入完成')
-                }
-            })
+            this.$router.replace('/home')
+            // var param = new URLSearchParams;
+            //     param.append('email',this.email);
+            //     param.append('userPass',this.userPass);
+            // this.axios({
+            //     method:'post',
+            //     url:'http://localhost:3000/login',
+            //     data:param
+            // }).then((ok)=>{
+            //     if(ok.data.linkid == 0){
+            //         alert('用户名或密码错误');
+            //     }else if(ok.data.linkid == 1){
+            //         alert('登录成功');
+            //         this.$router.replace('/home')
+            //     }else{
+            //         alert('请确认您已输入完成')
+            //     }
+            // })
         }
     },
     components:{

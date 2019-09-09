@@ -32,13 +32,14 @@ export default {
 
         },
         register(){
-            this.axios({
-                methods:'get',
-                url:'http://localhost:3000/register',
-                params:{userName:this.userName,userPass:this.userPass,email:this.email}
-            }).then((ok)=>{
-                console.log(ok);
-            })
+            this.$router.replace('/login')
+            // this.axios({
+            //     methods:'get',
+            //     url:'http://localhost:3000/register',
+            //     params:{userName:this.userName,userPass:this.userPass,email:this.email}
+            // }).then((ok)=>{
+            //     console.log(ok);
+            // })
         }
     },
 }

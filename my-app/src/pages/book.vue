@@ -76,5 +76,6 @@ export default {
     }
     .centerBox{
         padding-top: .3rem;
+        padding-left: .2rem;
     }
 </style>

@@ -1,8 +1,8 @@
 <template>
     <div class="topLoad">
         <span>{{ title }}</span>
-        <button class="btn btn-success" id="btn1">极速下载</button>
-        <button class="btn btn-default">打开</button>
+        <button class="btn " id="btn1">极速下载</button>
+        <button class="btn ">打开</button>
     </div>
 </template>
 <script>
@@ -30,8 +30,11 @@ export default {
     #btn1{
         margin: 0 .1rem 0 .6rem;
     }
-    .btn-default{
-        color: #42bd56;
+    .btn{
+        padding: .06rem .08rem;
+        color: white;
         border-color:#42bd56; 
+        border-radius: .04rem;
+        background:#42bd56;
     }
 </style>

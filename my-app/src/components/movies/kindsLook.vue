@@ -27,7 +27,7 @@ export default {
     li{
         text-indent: .2rem;
         height: .4rem;
-        width: 50%;
+        width: 48%;
         display: flex;
         justify-content: space-between;
         line-height: .4rem;
